@@ -181,7 +181,7 @@ const Home = (props) => {
                 <Link to="/BlogHome">Read Blogs</Link>
               </h5>
               <h5>
-                <Link to="/CreateBlog">Create Blog</Link>
+                {props.authenticated ? <Link to="/CreateBlog">Create Blog</Link> : <Link to="/Login">Create Blog</Link>}
               </h5>
               <h5>
               {props.authenticated ? (
